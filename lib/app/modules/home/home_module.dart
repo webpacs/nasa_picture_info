@@ -1,6 +1,6 @@
+import 'package:nasa_picture_info/app/modules/home/detail/home_detail.dart';
+import 'package:nasa_picture_info/app/modules/home/detail/home_detail_controller.dart';
 import 'package:nasa_picture_info/app/modules/home/home_controller.dart';
-import 'package:nasa_picture_info/app/modules/home/page/home_detail/home_detail.dart';
-import 'package:nasa_picture_info/app/modules/home/page/home_detail/home_detail_controller.dart';
 import 'package:nasa_picture_info/app/modules/home/repositories/home_repository.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:nasa_picture_info/app/modules/home/home_page.dart';

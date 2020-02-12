@@ -1,7 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:nasa_picture_info/app/modules/home/detail/home_detail.dart';
 import 'package:nasa_picture_info/app/modules/home/home_controller.dart';
 import 'package:nasa_picture_info/app/modules/home/home_module.dart';
-import 'package:nasa_picture_info/app/modules/home/page/home_detail/home_detail.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
