@@ -1,12 +1,11 @@
 import 'package:dio/dio.dart';
+import 'package:nasa_picture_info/app/app_module.dart';
 import 'package:nasa_picture_info/app/modules/home/home_controller.dart';
 import 'package:nasa_picture_info/app/modules/home/page/home_detail/home_detail.dart';
 import 'package:nasa_picture_info/app/modules/home/page/home_detail/home_detail_controller.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:nasa_picture_info/app/modules/home/home_page.dart';
 import 'package:nasa_picture_info/app/shared/repositories/nasa_repository.dart';
-
-import '../../app_module.dart';
 
 class HomeModule extends ChildModule {
   final Dio dio = AppModule.to.get<Dio>();
