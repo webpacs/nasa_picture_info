@@ -1,7 +1,8 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:nasa_picture_info/app/modules/home/detail/home_detail.dart';
 import 'package:nasa_picture_info/app/modules/home/home_controller.dart';
+import 'package:nasa_picture_info/app/modules/home/home_mixin.dart';
 import 'package:nasa_picture_info/app/modules/home/home_module.dart';
+import 'package:nasa_picture_info/app/modules/home/page/home_detail/home_detail.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
@@ -15,7 +16,7 @@ class HomePage extends StatefulWidget {
   _HomePageState createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomePageState extends State<HomePage> with HomeMixin {
   final HomeController controller = HomeModule.to.get();
 
   @override
@@ -27,6 +28,7 @@ class _HomePageState extends State<HomePage> {
         systemNavigationBarIconBrightness: Brightness.light,
       ),
     );
+    homeController = this.controller;
     super.initState();
   }
 
@@ -34,11 +36,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        title: Text("NASA's Astronomy Picture of the Day"),
-      ),
+      appBar: getAppBarWidget(),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
@@ -63,13 +61,8 @@ class _HomePageState extends State<HomePage> {
                             context,
                             MaterialPageRoute(
                               builder: (_) => HomeDetail(
-                                img: controller.nasaList[index].hdurl,
-                                date: formatter
-                                    .format(controller.nasaList[index].date),
-                                title: controller.nasaList[index].title,
-                                explanation:
-                                    controller.nasaList[index].explanation,
                                 index: index,
+                                nasa: controller.nasaList[index],
                               ),
                             ),
                           );
