@@ -1,8 +1,8 @@
 import 'dart:convert';
 
-String nasaApiModelToJson(NasaApi data) => json.encode(data.toJson());
+String nasaModelToJson(Nasa data) => json.encode(data.toJson());
 
-class NasaApi {
+class Nasa {
   DateTime date;
   String explanation;
   String hdurl;
@@ -11,7 +11,7 @@ class NasaApi {
   String title;
   String url;
 
-  NasaApi({
+  Nasa({
     this.date,
     this.explanation,
     this.hdurl,
@@ -21,7 +21,7 @@ class NasaApi {
     this.url,
   });
 
-  factory NasaApi.fromJson(Map<dynamic, dynamic> json) => NasaApi(
+  factory Nasa.fromJson(Map<dynamic, dynamic> json) => Nasa(
         date: DateTime.parse(json["date"]),
         explanation: json["explanation"],
         hdurl: json["hdurl"],
@@ -42,13 +42,12 @@ class NasaApi {
         "url": url,
       };
 
-  factory NasaApi.fromJsonString(String str) =>
-      NasaApi.fromJson(json.decode(str));
+  factory Nasa.fromJsonString(String str) => Nasa.fromJson(json.decode(str));
 
   String toJsonString() => json.encode(toJson());
 
-  static List<NasaApi> fromJsonList(List list) {
+  static List<Nasa> fromJsonList(List list) {
     if (list == null) return null;
-    return list.map<NasaApi>((item) => NasaApi.fromJson(item)).toList();
+    return list.map<Nasa>((item) => Nasa.fromJson(item)).toList();
   }
 }
