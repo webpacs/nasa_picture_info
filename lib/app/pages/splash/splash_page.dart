@@ -15,7 +15,7 @@ class _SplashPageState extends State<SplashPage> {
     super.initState();
 
     Future.delayed(Duration(seconds: 2)).then((v) {
-      Modular.to.pushReplacementNamed('/home/');
+      Modular.to.pushReplacementNamed('/planets/');
     });
   }
 
