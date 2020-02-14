@@ -2,30 +2,33 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:intl/intl.dart';
+import 'package:nasa_picture_info/app/shared/models/nasa.dart';
 
 class HomeDetail extends StatefulWidget {
-  final String img;
-  final String date;
-  final String title;
-  final String explanation;
+  final Nasa nasa;
   final int index;
 
-  const HomeDetail({
-    Key key,
-    this.img,
-    this.date,
-    this.title,
-    this.explanation,
-    this.index,
-  }) : super(key: key);
+  const HomeDetail({Key key, this.nasa, this.index}) : super(key: key);
 
   @override
   _HomeDetailState createState() => _HomeDetailState();
 }
 
 class _HomeDetailState extends State<HomeDetail> {
+  Nasa nasa;
+
+  @override
+  void initState() {
+    nasa = widget.nasa;
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
+    var formatter = new DateFormat('MM/dd/yyyy');
+    String data = formatter.format(nasa.date);
+
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
@@ -37,7 +40,7 @@ class _HomeDetailState extends State<HomeDetail> {
             Hero(
               tag: 'image${widget.index}',
               child: CachedNetworkImage(
-                imageUrl: widget.img,
+                imageUrl: nasa.hdurl,
                 placeholder: (context, url) => CircularProgressIndicator(),
                 errorWidget: (context, url, error) => Icon(Icons.error),
                 fit: BoxFit.cover,
@@ -59,7 +62,7 @@ class _HomeDetailState extends State<HomeDetail> {
                   padding: EdgeInsets.only(top: 10, left: 10),
                   alignment: Alignment.centerLeft,
                   child: Text(
-                    "Title: ${widget.title}",
+                    "Title: ${nasa.title}",
                     softWrap: true,
                     textAlign: TextAlign.start,
                     style: GoogleFonts.montserrat(
@@ -71,7 +74,7 @@ class _HomeDetailState extends State<HomeDetail> {
                   padding: EdgeInsets.only(top: 10, left: 10),
                   alignment: Alignment.centerLeft,
                   child: Text(
-                    "Date: ${widget.date}",
+                    "Date: $data",
                     softWrap: true,
                     textAlign: TextAlign.start,
                     style: GoogleFonts.montserrat(
@@ -91,7 +94,7 @@ class _HomeDetailState extends State<HomeDetail> {
                       ),
                     ),
                     expanded: Text(
-                      widget.explanation,
+                      nasa.explanation,
                       softWrap: true,
                       maxLines: 1,
                       style: GoogleFonts.montserrat(
@@ -99,7 +102,7 @@ class _HomeDetailState extends State<HomeDetail> {
                       ),
                     ),
                     collapsed: Text(
-                      widget.explanation,
+                      nasa.explanation,
                       softWrap: true,
                       style: GoogleFonts.montserrat(
                         textStyle: TextStyle(color: Colors.white, fontSize: 15),

@@ -1,4 +1,5 @@
 import 'package:mobx/mobx.dart';
+import 'package:nasa_picture_info/app/shared/models/nasa.dart';
 part 'home_detail_controller.g.dart';
 
 class HomeDetailController = _HomeDetailControllerBase
@@ -6,10 +7,5 @@ class HomeDetailController = _HomeDetailControllerBase
 
 abstract class _HomeDetailControllerBase with Store {
   @observable
-  int value = 0;
-
-  @action
-  void increment() {
-    value++;
-  }
+  Nasa selectedNasaItem;
 }
