@@ -29,14 +29,14 @@ mixin _$HomeController on _HomeBase, Store {
   final _$nasaListAtom = Atom(name: '_HomeBase.nasaList');
 
   @override
-  List<NasaApi> get nasaList {
+  List<Nasa> get nasaList {
     _$nasaListAtom.context.enforceReadPolicy(_$nasaListAtom);
     _$nasaListAtom.reportObserved();
     return super.nasaList;
   }
 
   @override
-  set nasaList(List<NasaApi> value) {
+  set nasaList(List<Nasa> value) {
     _$nasaListAtom.context.conditionallyRunInAction(() {
       super.nasaList = value;
       _$nasaListAtom.reportChanged();
@@ -63,10 +63,10 @@ mixin _$HomeController on _HomeBase, Store {
   }
 
   @override
-  dynamic getData() {
+  dynamic getNasaPlanetaryData() {
     final _$actionInfo = _$_HomeBaseActionController.startAction();
     try {
-      return super.getData();
+      return super.getNasaPlanetaryData();
     } finally {
       _$_HomeBaseActionController.endAction(_$actionInfo);
     }
