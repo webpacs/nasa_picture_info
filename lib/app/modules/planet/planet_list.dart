@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nasa_picture_info/app/Theme.dart' as Theme;
-import 'package:nasa_picture_info/app/modules/planet/planet_row.dart';
+import 'package:nasa_picture_info/app/modules/planet/components/planet_row.dart';
 import 'package:nasa_picture_info/app/shared/models/planet_dao.dart';
 
 class PlanetList extends StatelessWidget {
