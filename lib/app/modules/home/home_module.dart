@@ -20,21 +20,9 @@ class HomeModule extends ChildModule {
   @override
   List<Router> get routers => [
         Router('/', child: (_, args) => HomePage()),
-        /*
         Router(
-          '/details/:img/:date/:title/:ex',
-          child: (_, args) => HomeDetail(
-            img: args.params['img'],
-            date: args.params['date'],
-            title: args.params['title'],
-            explanation: args.params['ex'],
-          ),
-          transition: TransitionType.fadeIn,
-        ),
-        */
-        Router(
-          '/detail',
-          child: (_, args) => HomeDetail(),
+          '/detail/:nasa/',
+          child: (_, args) => HomeDetail(args.params['nasa']),
           transition: TransitionType.fadeIn,
         ),
       ];
