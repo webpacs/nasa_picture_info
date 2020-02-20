@@ -77,3 +77,4 @@ doc/api/
 # End of https://www.gitignore.io/api/dart,flutter
 
 *.DS_Store
+.DS_Store
