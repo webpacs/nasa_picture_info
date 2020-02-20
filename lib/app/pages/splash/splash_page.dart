@@ -15,7 +15,7 @@ class _SplashPageState extends State<SplashPage> {
     super.initState();
 
     Future.delayed(Duration(seconds: 2)).then((v) {
-      Modular.to.pushReplacementNamed('/planets/');
+      Modular.to.pushReplacementNamed('/home/');
     });
   }
 
@@ -28,8 +28,8 @@ class _SplashPageState extends State<SplashPage> {
         color: Colors.blue,
         child: Center(
           child: Text(
-            'Nasa - Planetary',
-            style: TextStyle(color: Colors.white),
+            'Nasa API',
+            style: TextStyle(color: Colors.white, fontSize: 33),
           ),
         ),
       ),
