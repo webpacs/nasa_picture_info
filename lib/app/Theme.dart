@@ -10,7 +10,6 @@ class Colors {
   static const Color appBarGradientEnd = const Color(0xFF00C6FF);
 
   static const Color planetCard = const Color(0xFF434273);
-  //static const Color planetCard = const Color(0xFF8685E5);
   static const Color planetListBackground = const Color(0xFF3E3963);
   static const Color planetPageBackground = const Color(0xFF736AB7);
   static const Color planetTitle = const Color(0xFFFFFFFF);
