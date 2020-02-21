@@ -14,9 +14,9 @@ class HomeDetail extends StatelessWidget with HomeDetailMixin {
       body: Container(
         constraints: BoxConstraints.expand(),
         color: Color(0xFF736AB7),
-        child: Stack(
+         child: Stack(
           children: <Widget>[
-            getBackground(nasa),
+            getBackground(nasa, context),
             getGradient(),
             getContent(nasa),
             getToolbar(context),

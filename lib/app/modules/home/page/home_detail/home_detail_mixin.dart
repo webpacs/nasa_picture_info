@@ -6,14 +6,14 @@ import 'package:nasa_picture_info/app/shared/models/nasa.dart';
 import 'package:nasa_picture_info/app/shared/util/text_style.dart';
 
 mixin HomeDetailMixin {
-  Container getBackground(Nasa nasa) {
+  Container getBackground(Nasa nasa, BuildContext context) {
     return Container(
       child: CachedNetworkImage(
         imageUrl: nasa.hdurl != null
             ? nasa.hdurl
             : 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcThnDUAcSijcalzrwFLDHFAWcj2Mn_Rzb_KcK53qRPc2tQRZJ9s',
         placeholder: (context, url) =>
-            Image(image: new AssetImage("assets/img/load1.gif")),
+            Image(image: new AssetImage("assets/img/load1.gif"), width: MediaQuery.of(context).size.width, fit: BoxFit.fitWidth,),
         errorWidget: (context, url, error) => Icon(Icons.error),
         fit: BoxFit.cover,
         height: 300.0,
