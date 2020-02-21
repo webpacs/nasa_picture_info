@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cece3b4a-48bb-4250-8d4e-bb5ac8cc33b8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/app/app_module.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/app_module.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/app/modules/home/home_mixin.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/modules/home/home_mixin.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/app/modules/home/home_module.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/modules/home/home_module.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/app/modules/home/home_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/modules/home/home_page.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/app/modules/home/page/home_detail/home_detail.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/modules/home/page/home_detail/home_detail.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/app/pages/splash/splash_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/pages/splash/splash_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/app/shared/repositories/nasa_repository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/shared/repositories/nasa_repository.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/modules/home/page/home_detail/home_detail_mixin.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/modules/home/page/home_detail/home_detail_mixin.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nasa_picture_info.iml" beforeDir="false" afterPath="$PROJECT_DIR$/nasa_picture_info.iml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -21,14 +16,30 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_3_API_29" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/app/shared/repositories/nasa_repository.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="28" selection-start-line="28" selection-end-line="28" />
+            <state relative-caret-position="525">
+              <caret line="39" column="2" selection-start-line="39" selection-start-column="2" selection-end-line="39" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/app/modules/home/page/home_detail/home_detail.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -36,17 +47,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/app/modules/home/home_mixin.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="617">
-              <caret line="60" column="37" selection-start-line="60" selection-start-column="37" selection-end-line="60" selection-end-column="37" />
+            <state relative-caret-position="512">
+              <caret line="69" column="49" selection-start-line="69" selection-start-column="49" selection-end-line="69" selection-end-column="49" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/app/modules/home/components/nasa_row.dart">
+        <entry file="file://$PROJECT_DIR$/lib/app/modules/home/page/home_detail/home_detail_mixin.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
+            <state relative-caret-position="225">
+              <caret line="15" column="127" selection-start-line="15" selection-start-column="127" selection-end-line="15" selection-end-column="127" />
+              <folding>
+                <element signature="e#0#64#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -61,6 +75,8 @@
       <list>
         <option value="$PROJECT_DIR$/lib/app/shared/repositories/nasa_repository.dart" />
         <option value="$PROJECT_DIR$/lib/app/modules/home/components/nasa_row.dart" />
+        <option value="$PROJECT_DIR$/lib/app/modules/home/page/home_detail/home_detail.dart" />
+        <option value="$PROJECT_DIR$/lib/app/modules/home/page/home_detail/home_detail_mixin.dart" />
       </list>
     </option>
   </component>
@@ -92,6 +108,29 @@
               <item name="nasa_picture_info" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nasa_picture_info" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nasa_picture_info" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nasa_picture_info" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nasa_picture_info" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nasa_picture_info" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nasa_picture_info" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+              <item name="home_detail" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="nasa_picture_info" type="b2602c69:ProjectViewProjectNode" />
@@ -140,6 +179,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2304" height="1296" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19584438" />
       <window_info id="Captures" order="1" side_tool="true" />
@@ -150,16 +190,16 @@
       <window_info id="Resources Explorer" order="6" />
       <window_info id="Capture Tool" order="7" />
       <window_info id="Favorites" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" weight="0.32952693" />
       <window_info anchor="bottom" id="Dart Analysis" order="0" weight="0.32938188" />
       <window_info anchor="bottom" id="Run" order="1" weight="0.32952693" />
       <window_info anchor="bottom" id="TODO" order="2" />
       <window_info anchor="bottom" id="Android Profiler" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Logcat" order="4" />
-      <window_info anchor="bottom" id="Debug" order="5" weight="0.32952693" />
+      <window_info active="true" anchor="bottom" id="Debug" order="5" visible="true" weight="0.32952693" />
       <window_info anchor="bottom" id="Terminal" order="6" weight="0.32952693" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.32952693" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Theme Preview" order="2" />
@@ -168,17 +208,6 @@
       <window_info anchor="right" id="Palette&#9;" order="5" />
       <window_info anchor="right" id="Flutter Performance" order="6" />
     </layout>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/app/shared/repositories/nasa_repository.dart</url>
-          <line>29</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/lib/main.dart">
@@ -197,24 +226,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/app/shared/repositories/nasa_repository.dart">
+    <entry file="file://$PROJECT_DIR$/lib/app/modules/home/components/nasa_row.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        <state relative-caret-position="150">
+          <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/app/modules/home/page/home_detail/home_detail_controller.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/app/modules/home/common/nasa_summary.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#64#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/app/modules/home/home_mixin.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="617">
-          <caret line="60" column="37" selection-start-line="60" selection-start-column="37" selection-end-line="60" selection-end-column="37" />
+        <state relative-caret-position="512">
+          <caret line="69" column="49" selection-start-line="69" selection-start-column="49" selection-end-line="69" selection-end-column="49" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/app/modules/home/components/nasa_row.dart">
+    <entry file="file://$PROJECT_DIR$/lib/app/modules/home/page/home_detail/home_detail.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
+        <state relative-caret-position="240">
+          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/app/shared/repositories/nasa_repository.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="39" column="2" selection-start-line="39" selection-start-column="2" selection-end-line="39" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/app/modules/home/page/home_detail/home_detail_mixin.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="127" selection-start-line="15" selection-start-column="127" selection-end-line="15" selection-end-column="127" />
+          <folding>
+            <element signature="e#0#64#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
