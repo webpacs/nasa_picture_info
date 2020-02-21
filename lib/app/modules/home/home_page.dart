@@ -34,13 +34,31 @@ class _HomePageState extends State<HomePage> with HomeMixin {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Observer(builder: (_) {
-              if (controller.nasaList == null) {
-                return Center(
-                  child: CircularProgressIndicator(),
-                );
-              }
+              var nasaList = controller.nasaList;
 
-              return getListView(controller.nasaList);
+              if (nasaList != null) {
+                if (nasaList.error != null) {
+                  return Center(
+                      child: RaisedButton(
+                          child: Text('Erro!'),
+                          onPressed: () {
+                            controller.getNasaPlanetaryData();
+                          }));
+                }
+                if (nasaList.value == null) {
+                  return Center(
+                    child: CircularProgressIndicator(),
+                  );
+                }
+
+                return Expanded(
+                    child: RefreshIndicator(
+                  onRefresh: controller.refresh,
+                  child: getListView(nasaList.value),
+                ));
+              } else {
+                return Center(child: Text('Lista Vazia!'));
+              }
             }),
           ]),
     );
