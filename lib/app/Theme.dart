@@ -37,7 +37,7 @@ class TextStyles {
       color: Colors.planetTitle,
       fontFamily: 'Poppins',
       fontWeight: FontWeight.w600,
-      fontSize: 24.0);
+      fontSize: 18.0);
 
   static const TextStyle planetLocation = const TextStyle(
       color: Colors.planetLocation,
