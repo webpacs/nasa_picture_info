@@ -51,15 +51,13 @@ mixin HomeMixin {
     );
   }
 
-  Flexible getListView(List<Nasa> nasaList) {
-    return Flexible(
-      child: Container(
-        color: Theme.Colors.planetListBackground,
-        child: ListView.builder(
-          itemExtent: 160.0,
-          itemCount: nasaList.length,
-          itemBuilder: (_, index) => NasaRow(nasaList[index], index),
-        ),
+  Container getListView(List<Nasa> nasaList) {
+    return Container(
+      color: Theme.Colors.planetListBackground,
+      child: ListView.builder(
+        itemExtent: 160.0,
+        itemCount: nasaList.length,
+        itemBuilder: (_, index) => NasaRow(nasaList[index], index),
       ),
     );
   }
