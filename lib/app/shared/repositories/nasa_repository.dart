@@ -14,20 +14,29 @@ class NasaRepository extends Disposable {
   );
 
   Future<List<Nasa>> fetchNasaPlanetaryData() async {
-    try {
-      final response =
-          await dio.get('/planetary/apod?api_key=$API_KEY&count=10');
+    List<Nasa> nasaList = [];
+    Response response;
 
-      var value = Nasa.fromJsonList(response.data);
+    //try {
+    response = await dio.get('/planetary/apod?api_key=$API_KEY&count=5');
 
-      sharedPreferences.setStringList("HomeRepository-fetchPost",
-          value.map((item) => item.toJsonString()).toList());
+    nasaList = Nasa.fromJsonList(response.data);
+    sharedPreferences.setStringList("HomeRepository-fetchPost",
+        nasaList.map((item) => item.toJsonString()).toList());
 
-      return value;
+    print('TAMANHO LISTAAA: ${nasaList != null ? nasaList.length : 0}');
+
+    return nasaList;
+    /*
     } catch (e) {
+      print(e.toString());
       var value = sharedPreferences.getStringList("HomeRepository-fetchPost");
-      return value.map((item) => Nasa.fromJsonString(item)).toList();
+      if (value != null)
+        return value.map((item) => Nasa.fromJsonString(item)).toList();
+
+      throw DioError(error: e.toString());
     }
+    */
   }
 
   //dispose will be called automatically
