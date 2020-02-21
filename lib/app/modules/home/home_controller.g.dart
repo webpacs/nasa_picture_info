@@ -29,14 +29,14 @@ mixin _$HomeController on _HomeBase, Store {
   final _$nasaListAtom = Atom(name: '_HomeBase.nasaList');
 
   @override
-  List<Nasa> get nasaList {
+  ObservableFuture<List<Nasa>> get nasaList {
     _$nasaListAtom.context.enforceReadPolicy(_$nasaListAtom);
     _$nasaListAtom.reportObserved();
     return super.nasaList;
   }
 
   @override
-  set nasaList(List<Nasa> value) {
+  set nasaList(ObservableFuture<List<Nasa>> value) {
     _$nasaListAtom.context.conditionallyRunInAction(() {
       super.nasaList = value;
       _$nasaListAtom.reportChanged();

@@ -19,22 +19,22 @@ abstract class _HomeBase with Store {
   bool hasImage = false;
 
   @observable
-  List<Nasa> nasaList;
+  ObservableFuture<List<Nasa>> nasaList;
 
   @action
   void imageVerify(int index) {
-    if (nasaList[index].hdurl == null) {
-      hasImage = false;
-    } else {
-      hasImage = true;
-    }
+    nasaList.then((data) {
+      if (data[index].hdurl == null) {
+        hasImage = false;
+      } else {
+        hasImage = true;
+      }
+    });
   }
 
   @action
   getNasaPlanetaryData() {
-    nasaRepository.fetchNasaPlanetaryData().then((data) {
-      nasaList = data;
-    });
+    nasaList = nasaRepository.fetchNasaPlanetaryData().asObservable();
   }
 
   @action
