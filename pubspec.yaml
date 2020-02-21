@@ -63,11 +63,8 @@ flutter:
   #  - images/a_dot_ham.jpeg
 
   assets:
-    - assets/img/mars.png
-    - assets/img/neptune.png
-    - assets/img/moon.png
-    - assets/img/earth.png
-    - assets/img/mercury.png
+    - assets/img/load1.gif
+    - assets/img/load2.gif
     - assets/img/ic_distance.png
     - assets/img/ic_gravity.png
   # An image asset can refer to one or more resolution-specific "variants", see
