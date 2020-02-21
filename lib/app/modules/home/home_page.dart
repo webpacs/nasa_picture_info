@@ -45,11 +45,8 @@ class _HomePageState extends State<HomePage> with HomeMixin {
                             controller.getNasaPlanetaryData();
                           }));
                 }
-                if (nasaList.value == null) {
-                  return Center(
-                    child: CircularProgressIndicator(),
-                  );
-                }
+                if (nasaList.value == null)
+                  return getCircularProgressIndicator(context);
 
                 return Expanded(
                     child: RefreshIndicator(

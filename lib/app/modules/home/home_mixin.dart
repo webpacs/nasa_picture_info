@@ -61,4 +61,22 @@ mixin HomeMixin {
       ),
     );
   }
+
+  Expanded getCircularProgressIndicator(BuildContext context) {
+    return Expanded(
+      child: Container(
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
+        color: Theme.Colors.planetListBackground,
+        child: Center(
+            child: ClipOval(
+                child: Image.asset(
+          "assets/img/load1.gif",
+          height: 100.0,
+          width: 100.0,
+          fit: BoxFit.fitHeight,
+        ))),
+      ),
+    );
+  }
 }

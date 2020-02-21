@@ -9,8 +9,11 @@ mixin HomeDetailMixin {
   Container getBackground(Nasa nasa) {
     return Container(
       child: CachedNetworkImage(
-        imageUrl: nasa.hdurl,
-        placeholder: (context, url) => CircularProgressIndicator(),
+        imageUrl: nasa.hdurl != null
+            ? nasa.hdurl
+            : 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcThnDUAcSijcalzrwFLDHFAWcj2Mn_Rzb_KcK53qRPc2tQRZJ9s',
+        placeholder: (context, url) =>
+            Image(image: new AssetImage("assets/img/load1.gif")),
         errorWidget: (context, url, error) => Icon(Icons.error),
         fit: BoxFit.cover,
         height: 300.0,

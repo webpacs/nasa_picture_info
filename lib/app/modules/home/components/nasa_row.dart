@@ -19,8 +19,16 @@ class NasaRow extends StatelessWidget {
         tag: 'planet-icon-$index',
         child: ClipOval(
           child: CachedNetworkImage(
-            imageUrl: nasa.hdurl != null ? nasa.hdurl : 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcThnDUAcSijcalzrwFLDHFAWcj2Mn_Rzb_KcK53qRPc2tQRZJ9s',
-            placeholder: (context, url) => CircularProgressIndicator(),
+            imageUrl: nasa.hdurl != null
+                ? nasa.hdurl
+                : 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcThnDUAcSijcalzrwFLDHFAWcj2Mn_Rzb_KcK53qRPc2tQRZJ9s',
+            placeholder: (context, url) => ClipOval(
+                child: Image.asset(
+              "assets/img/load2.gif",
+              height: 100.0,
+              width: 100.0,
+              fit: BoxFit.fitHeight,
+            )),
             errorWidget: (context, url, error) => Icon(Icons.error),
             fit: BoxFit.cover,
             height: Theme.Dimens.planetHeight,

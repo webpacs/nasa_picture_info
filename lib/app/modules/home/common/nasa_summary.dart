@@ -24,8 +24,16 @@ class NasaSummary extends StatelessWidget {
         tag: "planet-hero-$index",
         child: ClipOval(
           child: CachedNetworkImage(
-            imageUrl: nasa.hdurl,
-            placeholder: (context, url) => CircularProgressIndicator(),
+            imageUrl: nasa.hdurl != null
+                ? nasa.hdurl
+                : 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcThnDUAcSijcalzrwFLDHFAWcj2Mn_Rzb_KcK53qRPc2tQRZJ9s',
+            placeholder: (context, url) => ClipOval(
+                child: Image.asset(
+              "assets/img/load2.gif",
+              height: 90.0,
+              width: 90.0,
+              fit: BoxFit.fitHeight,
+            )),
             errorWidget: (context, url, error) => Icon(Icons.error),
             fit: BoxFit.cover,
             height: 92.0,
