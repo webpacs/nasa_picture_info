@@ -8,7 +8,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:name="io.flutter.app.FlutterApplication"
-        android:label="nasa_picture_info"
+        android:label="Nasa API"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
