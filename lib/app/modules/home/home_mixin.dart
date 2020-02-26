@@ -72,8 +72,8 @@ mixin HomeMixin {
             child: ClipOval(
                 child: Image.asset(
           "assets/img/load1.gif",
-          height: 100.0,
-          width: 100.0,
+          height: Theme.Dimens.planetHeight,
+          width: Theme.Dimens.planetWidth,
           fit: BoxFit.fitHeight,
         ))),
       ),
