@@ -5,16 +5,14 @@ import 'package:flutter/material.dart';
 import 'package:nasa_picture_info/app/app_widget.dart';
 import 'package:nasa_picture_info/app/modules/home/home_module.dart';
 import 'package:nasa_picture_info/app/pages/splash/splash_page.dart';
-import 'package:nasa_picture_info/app/shared/constants/app_constants.dart';
 import 'package:nasa_picture_info/app/shared/repositories/nasa_repository.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class AppModule extends MainModule {
   final SharedPreferences sharedPreferences;
-  final Dio dio = Dio(BaseOptions(
-      baseUrl: BASE_URL, connectTimeout: 5000, receiveTimeout: 3000));
+  final Dio dio;
 
-  AppModule(this.sharedPreferences);
+  AppModule(this.sharedPreferences, this.dio);
 
   @override
   List<Bind> get binds => [
