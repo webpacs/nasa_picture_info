@@ -34,7 +34,16 @@ abstract class _HomeBase with Store {
 
   @action
   getNasaPlanetaryData() {
+    //try {
     nasaList = nasaRepository.fetchNasaPlanetaryData().asObservable();
+    /*
+    } catch (e) {
+      print(e.toString());
+      var value = sharedPreferences.getStringList("HomeRepository-fetchPost");
+      if (value != null)
+        return value.map((item) => Nasa.fromJsonString(item)).toList();
+    }
+    */
   }
 
   @action
