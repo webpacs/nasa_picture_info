@@ -61,7 +61,10 @@ mixin HomeDetailMixin {
                   style: Style.headerTextStyle,
                 ),
                 Separator(),
-                Text(nasa.explanation, style: Style.commonTextStyle),
+                Text(
+                  nasa.explanation,
+                  style: Style.commonTextStyle,
+                ),
               ],
             ),
           ),
